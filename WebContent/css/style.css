@@ -1,11 +1,9 @@
-/*
-	Différentes marges appliquées
-*/
 
 /* Marges entre les sections */
-.activity_margin { margin-bottom: 100px; } /* Activités principales */
-.website_margin  { margin-top: 25px; margin-bottom: 25px; } /* Sites internet */
-.website_icon_margin { margin-top: 18px; } /* Icones (Sites internet) */
+.activity_margin 		{ margin-bottom: 100px; } 					/* Activités principales */
+.website_margin  		{ margin-top: 25px; margin-bottom: 25px; } 	/* Sites internet */
+.website_icon_margin 	{ margin-top: 18px; } 						/* Icones (Sites internet) */
+.footer_margin 			{ margin: 30px 0; } 						/* Footer */
 
 /* Marge bouton "En savoir plus" (Partie Site internet) */
 .website_button_margin { margin: 20px 10px; }
@@ -14,7 +12,7 @@
 .presentation_button_margin { margin-top: 25px; }
 
 /* Marge du logo */
-.marge_logo { margin-top: 7px; margin-left: 25px; }
+.marge_logo { margin: 7px 0 0 25px; }
 
 /* Marge bouton "En savoir plus" (Partie Site internet) */
 .website_button_margin { margin: 20px 10px; }
@@ -28,7 +26,8 @@
 .navyblue { background: #425469; } /* section Actualités */
 .darkgrey { background: #414547; } /* section Footer */
 .black    { background: #2b2e2f; } /* section Références */
-.grey_background { background-color: grey; } /* Boutons */
+
+.grey 	  { background-color: grey; } /* Boutons */
 
 /* ===================== */
 /*	Différentes couleurs */
@@ -36,185 +35,79 @@
 
 .white_color { color: white; }
 
-/*
-	Classes
-*/
+.container { max-width: 1180px; margin: 0 auto; }
 
-.container {
-	max-width: 1180px;
-	margin: 0 auto;
-}
-
-.service_icon {
-	position : relative;
-	top : -21px;
-	margin-bottom : -21px;
-}
+.service_icon { position : relative; top : -21px; margin-bottom : -21px; }
 
 /* =================== */
 /* Partie Présentation */
 /* =================== */
 
-.bloc {
-	top: 40px;
-	float: left;
-	outline: 2px solid #eeeeed;
-	margin-top: 30px;
-	z-index : 1;
-}
+.bloc { top: 40px; float: left; outline: 2px solid #eeeeed; margin-top: 30px; z-index : 1; }
 
-.bloc h3 {
-	padding-top: 20px;
-	font-size: 18px;
-	color: #666666;
-}
+.bloc h3 { padding-top: 20px; font-size: 18px; color: #666666; }
 
-.bloc p {
-	font-size: 12px;
-	color: #c3c3c3;
-}
+.bloc p { font-size: 12px; color: #c3c3c3; }
 
-.presentation {
-	padding-top: 20px;
-}
+.presentation { padding-top: 20px; }
 
-.presentation h4 {
-	font-size: 19px;
-	color: #666666;
-}
+.presentation h4 { font-size: 19px; color: #666666; }
 
-.presentation p {
-	font-size: 14px;
-	color: #aaaba8;
-	margin-top: 15px;
-}
+.presentation p { font-size: 14px; color: #aaaba8; margin-top: 15px; }
 
 /* ================= */
 /* Partie Actualités */
 /* ================= */
 
-.actu_title {
-	padding-top: 15px;
-}
+.actu_title { padding-top: 15px; }
 
-.annotation_wrap {
-	margin: auto;
-	position: relative;
-	top: -30px;
-	min-height: 30px;
-	max-width: 275px;
-	background: rgba(0, 0, 0, 0.5);
-}
+.annotation_wrap { margin: auto; position: relative; top: -30px; min-height: 30px; max-width: 275px; background: rgba(0, 0, 0, 0.5); }
 
-.annotation_title {
-	padding: 5px 0 0 10px;
-	font-size: 13px;
-}
+.annotation_title { padding: 5px 0 0 10px; font-size: 13px; }
 
-.actu {
-	max-height: 200px;
-	margin: auto;
-}
+.actu { max-height: 200px; margin: auto; }
 
-.actu_overview {
-	background: rgba(53, 149, 210, 0.6);
-	position: relative;
-	bottom: 184px;
-	max-height: 180px;
-	max-width: 275px;
-	margin: auto;
-}
+.actu_overview { background: rgba(53, 149, 210, 0.6); position: relative; bottom: 184px; max-height: 180px; max-width: 275px; margin: auto; }
 
-.overview_title {
-	font-size: 15px;
-}
+.overview_title { font-size: 15px; }
 
-.overview_content {
-	line-height: 20px;
-	font-size: 14px;
-}
+.overview_content { line-height: 20px; font-size: 14px; }
 
-.activity_detail_button {
-	position: relative;
-	bottom: 5px;
-	background: rgb(66, 84, 105);
-}
+.activity_detail_button { position: relative; bottom: 5px; background: rgb(66, 84, 105); }
 
 /* ==================== */
 /* Partie Site Internet */
 /* ==================== */
 
-.site_title {
-	color: #555555;
-	font-size: 31px;
-}
+.site_title { color: #555555; font-size: 31px; }
 
-.site_title strong {
-	color: #3f96d2;
-}
+.site_title strong { color: #3f96d2; }
 
-.site_tooltip {
-	margin-top: 20px;
-	text-align: left;
-	margin-left: 80px;
-	padding: 0 0 0 15px;
-	border: 1px solid #dddddd;
-}
+.site_tooltip { margin: 20px 0 0 80px; text-align: left; padding: 0 0 0 15px; border: 1px solid #dddddd; }
 
-.site_tooltip h5 {
-	color: #444444;
-	font-size: 20px;
-	font-weight: bold;
-}
+.site_tooltip h5 { color: #444444; font-size: 20px; font-weight: bold; }
 
-.site_tooltip p {
-	margin-bottom: 10px;
-	font-size: 14px;
-}
+.site_tooltip p { margin-bottom: 10px; font-size: 14px; }
 
 /* ============= */
 /* Partie Footer */
 /* ============= */
 
-.section_footer {
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
+.footer_subtitle { margin-top: 9px; font-size: 21px; border-top: 3px solid #3f96d2; }
 
-.footer_subtitle {
-	margin-top: 9px;
-	font-size: 21px;
-	border-top: 3px solid #3f96d2;
-}
+.footer_coordinates { text-align: center; }
 
-.footer_coordinates {
-	text-align: center;
-}
+.coordinates { text-align: left; padding: 50px 0 0 5px; color: #949798; font-size: 11px; }
 
-.coordinates {
-	text-align: left;
-	padding: 50px 0 0 5px;
-	color: #949798;
-	font-size: 11px;
-}
+.coordinates strong { color: white; font-size: 13px; }
 
-.coordinates strong {
-	color: white;
-	font-size: 13px;	
-}
+/* =============== */
+/* Dernière partie */
+/* =============== */
 
-/* RESTE DE LA PAGE */
-.underfooter {
-	color: #858687;
-	font-size: 16px;
-	margin-bottom: 5px;
-}
+.underfooter { color: #858687; font-size: 16px; margin-bottom: 5px; }
 
-.copyright {
-	font-size: 13px;
-	color: #a5a5a5;
-	margin: 10px 0;
-}
+.copyright { font-size: 13px; color: #a5a5a5; margin: 10px 0; }
 
 /* Vue intermédiaire */
 @media only screen and (min-width: 480px) and (max-width: 678px) {
@@ -236,10 +129,6 @@
 	.blue-band {
 		height: 5px;
 		background: #31a3dd;
-	}
-
-	.tab a {
-		font-family: "Dosis";
 	}
 
 	.bloc {
