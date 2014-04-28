@@ -41,24 +41,33 @@ $(document).ready(function() {
 		$('img', this).attr('src', newSrc);
 	});
 
-	var annotationTitle;
+	/* Fixation de la barre de navigation en haut de page quand l'élement est en haut de fenêtre*/
+	jQuery(function($) {
+	    $(window).scroll(function(e) {
+	    	var winSc = $(window).scrollTop(),
+	    		fixbaranchor = $('#fixbar-anchor').offset().top;
+	    		fixbar = $('#fixbar');
 
-	$('.actu').mouseenter(function() {
-		annotationTitle = $(this).find('.annotation_wrap').text();
-		$(this).find('.annotation_wrap').remove();
-		$(this).append('<div class="actu_overview">\
-							<h5 class="overview_title white_color"> Fin du support de Windows 8 le 8 Avril ! </h5>\
-							<p class="overview_content white_color">\
-								Microsoft a assuré le support de Windows XP pendant les 12 dernières années.\
-								Il est temps désormais, pour nous et nos partenaires fabricants (...)\
-							</p>\
-							<a href="#" class="tiny radius button activity_detail_button">EN SAVOIR PLUS</a>\
-						</div>');
-	});
-	$('.actu').mouseleave(function() {
-		$(this).find('.actu_overview').remove();
-		$(this).append('<div class="annotation_wrap">\
-							<p class="annotation_title white_color">' + annotationTitle + '</p>\
-						</div>');
+	    		if (winSc > fixbaranchor) { /* Si l'élément est en haut de page */
+	    			fixbar.css({
+	    				'position': 'fixed', /* On fixe sa position */
+	    				'top': 0,
+	    				'width': '100%',
+	    				'margin': 'auto'
+	    			});
+	    			$('h6', fixbar).css({ /* On enlève les textes */
+	    				'display': 'none'
+	    			});
+	    		}
+	    		else { /* Sinon */
+	    			fixbar.css({
+	    				'position' : 'relative'
+	    			});
+	    			$('h6', fixbar).css({
+	    				'display': 'block'
+	    			});
+	    		}
+	    });
 	});
 });
+
