@@ -1,4 +1,5 @@
-<!doctype html>
+<?php $dir = './WebContent/'; ?>
+
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8" />
@@ -10,7 +11,7 @@
         <script src="WebContent/js/vendor/modernizr.js"></script>
     </head>
 <body>  
-    <?php include('Pages/header.php'); ?>
+    <?php require('WebContent/template/header.php'); ?>
 
     <!-- Diaporama -->
     <ul class="example-orbit" data-orbit>
@@ -82,6 +83,9 @@
                     <div class="annotation_wrap">
                         <p class="annotation_title white_color">Infitex s'installe à la Haute-Borne !</p>
                     </div>
+                    <div class="hover_actu">
+                        <p>Je suis un texte</p>
+                    </div>
                 </li>
                 <li class="actu">
                     <img src="WebContent/img/index/actu4.png" alt="actu4"/>
@@ -150,9 +154,8 @@
         </div>
     </div>
 
-    <?php
-        include('Pages/footer.php');
-    ?>
+    <?php require('WebContent/template/footer.php'); ?>
+
     <script src="WebContent/js/vendor/jquery.js"></script>
     <script src="WebContent/js/foundation.min.js"></script>
     <script src="WebContent/js/app.js"></script>

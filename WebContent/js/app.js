@@ -44,30 +44,43 @@ $(document).ready(function() {
 	/* Fixation de la barre de navigation en haut de page quand l'élement est en haut de fenêtre*/
 	jQuery(function($) {
 	    $(window).scroll(function(e) {
-	    	var winSc = $(window).scrollTop(),
-	    		fixbaranchor = $('#fixbar-anchor').offset().top;
-	    		fixbar = $('#fixbar');
+    	var winSc = $(window).scrollTop(),
+    		fixbaranchor = $('#fixbar-anchor').offset().top,
+    		fixbar = $('#fixbar');
 
-	    		if (winSc > fixbaranchor) { /* Si l'élément est en haut de page */
+    		if (winSc > fixbaranchor) { /* Si l'élément est en haut de page */
+    			if ($(window).width() >= 568) {
 	    			fixbar.css({
 	    				'position': 'fixed', /* On fixe sa position */
-	    				'top': 0,
-	    				'width': '100%',
-	    				'margin': 'auto'
 	    			});
-	    			$('h6', fixbar).css({ /* On enlève les textes */
-	    				'display': 'none'
-	    			});
+	    			$('h6', fixbar).hide(); 				
 	    		}
-	    		else { /* Sinon */
-	    			fixbar.css({
-	    				'position' : 'relative'
-	    			});
-	    			$('h6', fixbar).css({
-	    				'display': 'block'
-	    			});
-	    		}
+    		}
+    		else {
+    			fixbar.css({
+    				'position' : 'relative'
+    			});
+    			if ($(window).width() >= 568) {
+	    			$('h6', fixbar).show();
+    			}
+    		}
 	    });
 	});
 });
 
+/* Lorsqu'on clique sur un élement de la barre de navigation,
+on scrolle jusqu'à la section correspondante */
+function scrollonSection(iterator) {
+	var idSection = '#link' + iterator;
+
+	$('html, body').animate({
+		scrollTop: $(idSection).offset().top
+	}, 1000);
+
+	if ($(window).width() >= 568) {
+		$('#fixbar').css({
+			'position': 'fixed', /* On fixe sa position */
+		});
+		$('h6', '#fixbar').hide();	
+	}
+}

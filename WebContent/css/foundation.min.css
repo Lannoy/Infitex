@@ -48,6 +48,12 @@ ul[class="right"] {
 	margin-top: 15px;
 }
 
+/* Réduction du padding-bottom des listes ("li") de foundation */
+[class*="block-grid-"]>li {
+	padding: 0 0.625rem 0.25rem;
+/*	padding: 0 0.625rem 1.25rem; ancien padding */
+}
+
 /* Vue intermédiaire */
 @media only screen and (min-width: 480px) and (max-width: 678px) {
 	.top-bar-section li a:not(.button) {

@@ -25,6 +25,7 @@
 .footer_backgroundcolor     { background: #414547; }
 .footer2_backgroundcolor    { background: #2b2e2f; }
 .actuality_backgroundcolor  { background: #425469; }
+.lightgray_backgroundcolor  { background: #f8f8f8; }
 
 /* Background gris (pour les boutons) */
 .grey { background-color: grey; }
@@ -79,7 +80,11 @@
 
 .annotation_title { padding: 5px 0 0 10px; font-size: 13px; }
 
-.actu { max-height: 200px; margin: auto; }
+.actu { max-height: 200px; margin: auto; overflow: hidden; }
+
+.actu:hover .hover_actu { top: -230px; }
+
+.hover_actu { position: relative; background-color: rgba(49, 163, 221, 0.95); top: 0; height: 180px; transition: top 0.4s linear; }
 
 .actu_overview { background: rgba(53, 149, 210, 0.6); position: relative; bottom: 184px; max-height: 180px; max-width: 275px; margin: auto; }
 
@@ -127,27 +132,6 @@
 /* Page "Nos Solutions" */
 /* ==================== */
 
-/* ======== */
-/* Bannière */
-/* ======== */
-/*
-.banner {
-	display: none;
-}
-
-.banner_border {
-	background: #3d444a;
-	max-width: 400px;
-	position: relative;
-}
-
-.banner_title {
-	text-align: center;
-	font-size: 58px;
-	letter-spacing: 3px;
-}
-*/
-
 .prestations {
 	font-size: 21px;
 	margin: 10px;
@@ -157,6 +141,14 @@
 .center_solution_img { margin: 10px 0; }
 
 .center_content_solution { text-align: center; margin: auto; }
+
+#fixbar {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 10000;
+	top: 0;
+}
 
 /* Vue intermédiaire */
 @media only screen and (min-width: 480px) and (max-width: 678px) {
