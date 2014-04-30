@@ -54,6 +54,27 @@ ul[class="right"] {
 /*	padding: 0 0.625rem 1.25rem; ancien padding */
 }
 
+.button {
+	height: 30px;
+	font-size: 16px;
+	font-family: "Dosis";
+	font-weight: 600;
+	border-width: 3px;
+	background: transparent;
+	margin-bottom: 0px;
+	padding: 3px 30px;
+}
+
+.custom_grey_button {
+	border-color: #777777;
+	color: #777777;
+}
+
+.custom_blue_button {
+	border-color: #31a3dd;
+	color: #31a3dd;
+}
+
 /* Vue intermédiaire */
 @media only screen and (min-width: 480px) and (max-width: 678px) {
 	.top-bar-section li a:not(.button) {

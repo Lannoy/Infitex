@@ -9,13 +9,19 @@
 .website_button_margin { margin: 20px 10px; }
 
 /* Marge bouton "En savoir plus" (Partie Présentation) */
-.presentation_button_margin { margin-top: 25px; }
+.presentation_button_margin { margin: 25px auto; }
 
 /* Marge du logo */
 .marge_logo { margin: 7px 0 0 25px; }
 
 /* Marge bouton "En savoir plus" (Partie Site internet) */
 .website_button_margin { margin: 20px 10px; }
+
+/* Marge entre la barre fixe et le détail de la solution dans "Nos Solutions" */
+.solutions_detail_margin { margin-top: 170px; }
+
+/* Pour les grandes images dans "Nos Solutions" */
+.padding20 { padding-bottom: 20px; padding-top: 20px; }
 
 /* ================================== */
 /*	Différents backgrounds / couleurs */
@@ -35,6 +41,11 @@
 .grey_color  { color: #777777; }
 .blue_color  { color: #31a3dd; }
 
+/* ======== */
+/* Bannière */
+/* ======== */
+.banniere { background: url(WebContent/img/bandeau/bandeau3.png); }
+
 /* ====== */
 /* Autres */
 /* ====== */
@@ -47,16 +58,21 @@
 /* Différentes tailles de police */
 /* ============================= */
 
+.fontsize14 { font-size: 14px; }
 .fontsize16 { font-size: 16px; }
+.fontsize20 { font-size: 20px; }
 .fontsize32 { font-size: 32px; }
 
-.container { max-width: 1180px; margin: 0 auto; }
-
-.service_icon { position : relative; top : -21px; margin-bottom : -21px; }
+.fontweight400 { font-weight: 400; }
+.font-semibold { font-weight: 600; }
 
 /* =================== */
 /* Partie Présentation */
 /* =================== */
+
+.container { max-width: 1180px; margin: 0 auto; }
+
+.service_icon { position : relative; top : -21px; margin-bottom : -21px; }
 
 .bloc { float: left; outline: 2px solid #eeeeed; margin-top: 30px; z-index : 1; }
 
@@ -132,22 +148,19 @@
 /* Page "Nos Solutions" */
 /* ==================== */
 
-.prestations {
-	font-size: 21px;
-	margin: 10px;
-}
+.prestations { font-size: 21px; margin: 10px; }
 
 /* Nos Solutions : centrer les petites images */
 .center_solution_img { margin: 10px 0; }
 
 .center_content_solution { text-align: center; margin: auto; }
 
-#fixbar {
+#fixbar { position: relative; width: 100%; margin: 0 auto; z-index: 10000; top: 0; }
+
+.detail_solution {
 	position: relative;
-	width: 100%;
-	margin: 0 auto;
-	z-index: 10000;
-	top: 0;
+	top: -40px;
+	padding-top: 40px;
 }
 
 /* Vue intermédiaire */

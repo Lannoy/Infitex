@@ -41,6 +41,10 @@ $(document).ready(function() {
 		$('img', this).attr('src', newSrc);
 	});
 
+	$('.prestations_img').mouseenter(function() {
+		$(this).animateRotate(360, 800);
+	});
+
 	/* Fixation de la barre de navigation en haut de page quand l'élement est en haut de fenêtre*/
 	jQuery(function($) {
 	    $(window).scroll(function(e) {
@@ -50,6 +54,9 @@ $(document).ready(function() {
 
     		if (winSc > fixbaranchor) { /* Si l'élément est en haut de page */
     			if ($(window).width() >= 568) {
+    				$('#link1').css({
+    					'margin-top': '165px'
+    				});
 	    			fixbar.css({
 	    				'position': 'fixed', /* On fixe sa position */
 	    			});
@@ -61,6 +68,9 @@ $(document).ready(function() {
     				'position' : 'relative'
     			});
     			if ($(window).width() >= 568) {
+    				$('#link1').css({
+    					'margin-top': '50px'
+    				});
 	    			$('h6', fixbar).show();
     			}
     		}
@@ -68,19 +78,35 @@ $(document).ready(function() {
 	});
 });
 
+/* Rotations des images, partie prestations */
+$.fn.animateRotate = function(angle, duration, easing, complete) {
+    return this.each(function() {
+        var $elem = $(this);
+
+        $({deg: 0}).animate({deg: angle}, {
+            duration: duration,
+            easing: easing,
+            step: function(now) {
+                $elem.css({
+                    transform: 'rotate(' + now + 'deg)'
+                });
+            },
+            complete: complete || $.noop
+        });
+    });
+};
+
 /* Lorsqu'on clique sur un élement de la barre de navigation,
 on scrolle jusqu'à la section correspondante */
 function scrollonSection(iterator) {
 	var idSection = '#link' + iterator;
 
-	$('html, body').animate({
-		scrollTop: $(idSection).offset().top
-	}, 1000);
-
-	if ($(window).width() >= 568) {
-		$('#fixbar').css({
-			'position': 'fixed', /* On fixe sa position */
-		});
-		$('h6', '#fixbar').hide();	
+	var scroll = $(idSection).offset().top;
+	if ($(window).width() >= 568) {		/* Si la window dépasse cette taille, la barre est fixe,
+											on prend sa hauteur en compte */
+		scroll -= $('#fixbar').height()
 	}
+	$('html, body').animate({
+		scrollTop: scroll
+	}, 1000);
 }

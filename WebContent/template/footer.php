@@ -3,20 +3,20 @@
     <div class="footer_backgroundcolor">
         <div class="row">
             <div class="large-2 medium-3 small-6 columns text-center footer_margin">
-                <img src="<?php echo $dir; ?>img/footer/icon-footer_refweb.png" alt="referenceWeb"/>
+                <img src="WebContent/img/footer/icon-footer_refweb.png" alt="referenceWeb"/>
                 <h5 class="footer_subtitle white_color">Références Web</h5>
             </div>
             <div class="large-2 medium-3 small-6 columns text-center footer_margin">
-                <img src="<?php echo $dir; ?>img/footer/icon-footer_partenaires.png" alt="partenaires"/>
+                <img src="WebContent/img/footer/icon-footer_partenaires.png" alt="partenaires"/>
                 <h5 class="footer_subtitle white_color">Nos Partenaires</h5>
             </div>
             <div class="large-2 medium-3 small-6 columns text-center footer_margin">
-                <img src="<?php echo $dir; ?>img/footer/icon-footer_techno.png" alt="technologies"/>
+                <img src="WebContent/img/footer/icon-footer_techno.png" alt="technologies"/>
                 <h5 class="footer_subtitle white_color">Nos Technologies</h5>
             </div>
 
             <div class="large-3 medium-3 small-6 columns text-center footer_coordinates footer_margin">
-                <img src="<?php echo $dir; ?>img/footer/logo-infitex-blanc.png" alt="logoInfitexBlanc" class="left"/>
+                <img src="WebContent/img/footer/logo-infitex-blanc.png" alt="logoInfitexBlanc" class="left"/>
                 <p class="coordinates grey_color"><strong>
                     1 rue Hubble <br />
                     Parc de la Haute Borne <br />
